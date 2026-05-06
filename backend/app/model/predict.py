@@ -2,8 +2,6 @@ import os
 import pickle
 import json
 import numpy as np
-import torch
-from app.model.train import MoodMLP
 
 PREPROCESSOR_PATH = os.path.join(os.path.dirname(__file__), "preprocessor.pkl")
 MODELS_DIR = os.path.join(os.path.dirname(__file__), "saved_models")
@@ -16,6 +14,7 @@ _all_models = {}
 
 
 def _get_device() -> str:
+    import torch
     if torch.backends.mps.is_available():
         return "mps"
     if torch.cuda.is_available():
@@ -49,6 +48,8 @@ def load_all_models():
     mlp_pt = os.path.join(MODELS_DIR, "mlp", "model.pt")
     mlp_cfg = os.path.join(MODELS_DIR, "mlp", "config.json")
     if os.path.exists(mlp_pt):
+        import torch
+        from app.model.train import MoodMLP
         with open(mlp_cfg) as f:
             cfg = json.load(f)
         mlp = MoodMLP(cfg["num_classes"])
@@ -87,6 +88,7 @@ def predict_proba_single(features_scaled: np.ndarray, model, model_type: str) ->
     """Returns probability array of shape (n_classes,)."""
     x = features_scaled.reshape(1, -1)
     if model_type == "mlp":
+        import torch
         device = _get_device()
         model.to(device)
         model.eval()
@@ -101,6 +103,7 @@ def predict_proba_single(features_scaled: np.ndarray, model, model_type: str) ->
 def predict_batch_labels(X_scaled: np.ndarray, model, model_type: str, class_labels: list) -> list:
     """Returns list of mood label strings for a batch."""
     if model_type == "mlp":
+        import torch
         device = _get_device()
         model.to(device)
         model.eval()
