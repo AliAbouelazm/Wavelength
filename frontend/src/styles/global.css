@@ -1,0 +1,51 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #ffffff;
+  --surface: #fafafa;
+  --border: #ebebeb;
+  --text-primary: #0a0a0a;
+  --text-secondary: #737373;
+  --accent: #d97706;
+  --positive-feature: #059669;
+  --negative-feature: #dc2626;
+  --mood-happy-bg: #fef3c7;
+  --mood-happy-text: #92400e;
+  --mood-energetic-bg: #fee2e2;
+  --mood-energetic-text: #991b1b;
+  --mood-melancholic-bg: #ede9fe;
+  --mood-melancholic-text: #4c1d95;
+  --mood-focused-bg: #ecfdf5;
+  --mood-focused-text: #064e3b;
+  --mood-calm-bg: #eff6ff;
+  --mood-calm-text: #1e3a8a;
+  --mood-intense-bg: #1a1a1a;
+  --mood-intense-text: #fafafa;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+input[type='range'] {
+  accent-color: var(--accent);
+}
