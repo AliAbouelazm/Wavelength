@@ -3,6 +3,8 @@ Trains Random Forest, XGBoost, and a PyTorch MLP on processed track data.
 All three models are trained on StandardScaler-transformed features.
 """
 import os
+os.environ.setdefault("KMP_DUPLICATE_LIB_OK", "TRUE")
+os.environ.setdefault("OMP_NUM_THREADS", "1")
 import pickle
 import json
 import numpy as np
@@ -159,8 +161,8 @@ def train_all():
     xgb = XGBClassifier(
         n_estimators=300, max_depth=6, learning_rate=0.05,
         subsample=0.8, colsample_bytree=0.8,
-        use_label_encoder=False, eval_metric="mlogloss",
-        random_state=42, n_jobs=-1,
+        eval_metric="mlogloss",
+        random_state=42, n_jobs=1,
     )
     xgb.fit(X_train, y_train, sample_weight=sample_weights)
     xgb_preds = xgb.predict(X_test)

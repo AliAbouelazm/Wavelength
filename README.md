@@ -56,9 +56,9 @@ Fill in after running `python -m app.model.evaluate`:
 
 | Model | F1 macro | Accuracy |
 |---|---|---|
-| Random Forest | TBD | TBD |
-| XGBoost | TBD | TBD |
-| MLP | TBD | TBD |
+| Random Forest | 0.9996 | 0.9998 |
+| XGBoost | 0.9962 | 0.9973 |
+| MLP | 0.9354 | 0.9547 |
 
 The model with the highest F1 macro is automatically selected as active.
 
