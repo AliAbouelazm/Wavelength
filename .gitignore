@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+.env
+
+# ML artifacts (train locally, upload separately to hosting)
+backend/app/data/processed_tracks.parquet
+backend/app/model/saved_models/
+backend/app/model/preprocessor.pkl
+backend/app/model/metrics.json
+
+# Node
+node_modules/
+dist/
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
