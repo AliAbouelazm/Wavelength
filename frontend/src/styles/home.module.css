@@ -68,7 +68,7 @@
 
 .findButton {
   background: var(--text-primary);
-  color: #ffffff;
+  color: var(--bg);
   padding: 12px 32px;
   border-radius: 6px;
   font-size: 15px;
