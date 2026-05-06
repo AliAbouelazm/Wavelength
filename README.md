@@ -131,4 +131,4 @@ VITE_API_URL=http://localhost:8000
 
 ## Live demo
 
-(Add after deployment)
+https://wavelength.aliabouelazm.com
