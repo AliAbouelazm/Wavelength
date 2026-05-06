@@ -15,6 +15,9 @@ export default function Nav() {
         <NavLink to="/explore" className={linkClass}>
           Explore
         </NavLink>
+        <NavLink to="/performance" className={linkClass}>
+          Performance
+        </NavLink>
       </nav>
     </header>
   );

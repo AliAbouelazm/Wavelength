@@ -5,11 +5,7 @@ __pycache__/
 *.egg-info/
 .env
 
-# ML artifacts (train locally, upload separately to hosting)
-backend/app/data/processed_tracks.parquet
-backend/app/model/saved_models/
-backend/app/model/preprocessor.pkl
-backend/app/model/metrics.json
+# ML artifacts are committed - retrain locally with python -m app.data.preprocessor etc.
 
 # Node
 node_modules/

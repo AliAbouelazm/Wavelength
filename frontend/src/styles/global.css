@@ -3,26 +3,26 @@
 }
 
 :root {
-  --bg: #ffffff;
-  --surface: #fafafa;
-  --border: #ebebeb;
-  --text-primary: #0a0a0a;
+  --bg: #0c0c0c;
+  --surface: #161616;
+  --border: #262626;
+  --text-primary: #fafafa;
   --text-secondary: #737373;
   --accent: #d97706;
-  --positive-feature: #059669;
-  --negative-feature: #dc2626;
-  --mood-happy-bg: #fef3c7;
-  --mood-happy-text: #92400e;
-  --mood-energetic-bg: #fee2e2;
-  --mood-energetic-text: #991b1b;
-  --mood-melancholic-bg: #ede9fe;
-  --mood-melancholic-text: #4c1d95;
-  --mood-focused-bg: #ecfdf5;
-  --mood-focused-text: #064e3b;
-  --mood-calm-bg: #eff6ff;
-  --mood-calm-text: #1e3a8a;
+  --positive-feature: #10b981;
+  --negative-feature: #ef4444;
+  --mood-happy-bg: #2d1f00;
+  --mood-happy-text: #fbbf24;
+  --mood-energetic-bg: #2d0000;
+  --mood-energetic-text: #f87171;
+  --mood-melancholic-bg: #1a0d3d;
+  --mood-melancholic-text: #a78bfa;
+  --mood-focused-bg: #002416;
+  --mood-focused-text: #34d399;
+  --mood-calm-bg: #00142b;
+  --mood-calm-text: #60a5fa;
   --mood-intense-bg: #1a1a1a;
-  --mood-intense-text: #fafafa;
+  --mood-intense-text: #e5e5e5;
 }
 
 body {

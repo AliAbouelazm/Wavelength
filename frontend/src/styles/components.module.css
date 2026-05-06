@@ -120,7 +120,7 @@
   font-size: 12px;
   font-weight: 500;
   color: var(--accent);
-  background: #fef3c7;
+  background: rgba(217, 119, 6, 0.18);
   padding: 2px 8px;
   border-radius: 4px;
   white-space: nowrap;
